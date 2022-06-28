@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from 'react'
+import React, { useState, useCallback, useEffect } from 'react'
 
 import { Button, Checkbox, Form, Input } from 'antd'
 
@@ -56,10 +56,12 @@ export const HomeErp: React.FC = () => {
     [form, isOverwriteCheckboxSelected]
   )
 
-  form.setFieldsValue({
-    downloadsFolderPath,
-    ohShapeSongsFolderPath,
-  })
+  useEffect(() => {
+    form.setFieldsValue({
+      downloadsFolderPath,
+      ohShapeSongsFolderPath,
+    })
+  }, [downloadsFolderPath, form, ohShapeSongsFolderPath])
 
   return (
     <Container>
