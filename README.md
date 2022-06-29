@@ -10,7 +10,7 @@
 
 ###
 
-<h2 align="left">Installation an use</h2>
+<h2 align="left">Installation and use</h2>
 
 ###
 
