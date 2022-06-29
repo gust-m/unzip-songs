@@ -15,13 +15,13 @@ export const api = {
 
   extractFiles: (
     downloadsFolderPath: string,
-    ohShapeSongsFolderPath: string,
+    destinationSongsFolderPath: string,
     isOverwriteCheckboxSelected: boolean
   ) => {
     ipcRenderer.send(
       'extract',
       downloadsFolderPath,
-      ohShapeSongsFolderPath,
+      destinationSongsFolderPath,
       isOverwriteCheckboxSelected
     )
   },

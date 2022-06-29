@@ -6,7 +6,7 @@ import { Container, Content } from './styles'
 
 interface ExtractFilesProps {
   downloadsFolderPath: string
-  ohShapeSongsFolderPath: string
+  destinationSongsFolderPath: string
 }
 
 export const HomeErp: React.FC = () => {
@@ -17,24 +17,32 @@ export const HomeErp: React.FC = () => {
     useState(false)
 
   const downloadsFolderPath = localStorage.getItem('@unzipSongs:downloadPath')
-  const ohShapeSongsFolderPath = localStorage.getItem('@unzipSongs:extractPath')
+  const destinationSongsFolderPath = localStorage.getItem(
+    '@unzipSongs:extractPath'
+  )
 
   const handleSubmitExtractFiles = useCallback(
-    ({ downloadsFolderPath, ohShapeSongsFolderPath }: ExtractFilesProps) => {
+    ({
+      downloadsFolderPath,
+      destinationSongsFolderPath,
+    }: ExtractFilesProps) => {
       try {
         setIsLoading(true)
         console.log(downloadsFolderPath)
-        console.log(ohShapeSongsFolderPath)
+        console.log(destinationSongsFolderPath)
         console.log(isOverwriteCheckboxSelected)
 
         window.Main.extractFiles(
           downloadsFolderPath,
-          ohShapeSongsFolderPath,
+          destinationSongsFolderPath,
           isOverwriteCheckboxSelected
         )
 
         localStorage.setItem('@unzipSongs:downloadPath', downloadsFolderPath)
-        localStorage.setItem('@unzipSongs:extractPath', ohShapeSongsFolderPath)
+        localStorage.setItem(
+          '@unzipSongs:extractPath',
+          destinationSongsFolderPath
+        )
 
         setIsLoading(false)
       } catch (err) {
@@ -47,7 +55,7 @@ export const HomeErp: React.FC = () => {
             errors: ['There was an error trying to access this path'],
           },
           {
-            name: 'ohShapeSongsFolderPath',
+            name: 'destinationSongsFolderPath',
             errors: ['There was an error trying to access this path'],
           },
         ])
@@ -59,9 +67,9 @@ export const HomeErp: React.FC = () => {
   useEffect(() => {
     form.setFieldsValue({
       downloadsFolderPath,
-      ohShapeSongsFolderPath,
+      destinationSongsFolderPath,
     })
-  }, [downloadsFolderPath, form, ohShapeSongsFolderPath])
+  }, [downloadsFolderPath, form, destinationSongsFolderPath])
 
   return (
     <Container>
@@ -91,8 +99,8 @@ export const HomeErp: React.FC = () => {
               />
             </Form.Item>
             <Form.Item
-              label="Path OhShape Songs folder"
-              name="ohShapeSongsFolderPath"
+              label="Path Destination Songs folder"
+              name="destinationSongsFolderPath"
               rules={[
                 {
                   required: true,
@@ -102,7 +110,7 @@ export const HomeErp: React.FC = () => {
             >
               <Input
                 size="large"
-                name="ohShapeSongsFolderPath"
+                name="destinationSongsFolderPath"
                 placeholder="C:\Users\YOUR_PC_NAME\Documents\OhShape\Songs"
               />
             </Form.Item>

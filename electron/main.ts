@@ -122,12 +122,12 @@ async function registerListeners() {
     (
       _,
       downloadsFolderPath: string,
-      ohShapeSongsFolderPath: string,
+      destinationSongsFolderPath: string,
       isOverwriteCheckboxSelected: boolean
     ) => {
       extractFiles(
         downloadsFolderPath,
-        ohShapeSongsFolderPath,
+        destinationSongsFolderPath,
         isOverwriteCheckboxSelected
       )
     }
