@@ -14,7 +14,7 @@
 
 ###
 
-<p align="left">You just have to download <a href="https://drive.google.com/file/d/1sruc7OPuO0ZYxvUPBOiQHZInuaLRYhgT/view?usp=sharing">here</a><br>And open unzip-songs.exe</p>
+<p align="left">You just have to download <a target="_blank" href="https://drive.google.com/file/d/1sruc7OPuO0ZYxvUPBOiQHZInuaLRYhgT/view?usp=sharing">here</a><br>And open unzip-songs.exe</p>
 
 ###
 
@@ -60,7 +60,7 @@
 
 ###
 
-<p align="left">Destination folder after running the software.</p>
+<p align="left">Destination folder after running the script.</p>
 
 ###
 
