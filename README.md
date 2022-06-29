@@ -14,7 +14,7 @@
 
 ###
 
-<p align="left">You just have to download <a target="_blank" href="https://drive.google.com/file/d/1sruc7OPuO0ZYxvUPBOiQHZInuaLRYhgT/view?usp=sharing">here</a><br>And open unzip-songs.exe</p>
+<p align="left">You just have to download <a target="_blank" href="https://drive.google.com/u/0/uc?id=1sruc7OPuO0ZYxvUPBOiQHZInuaLRYhgT&export=download">here</a><br>And open unzip-songs.exe</p>
 
 ###
 
